@@ -1,0 +1,23 @@
+.ezcol>*{max-width:100%}.ezcol-one-quarter,.ezcol-one-half,.ezcol-three-quarter,.ezcol-one-third,.ezcol-two-third,.ezcol-one-fifth,.ezcol-two-fifth,.ezcol-three-fifth,.ezcol-four-fifth{float:left;margin-right:4%;position:relative;word-wrap:break-word;hyphens:auto;-moz-box-sizing:border-box !important;-webkit-box-sizing:border-box !important;box-sizing:border-box !important;text-rendering:optimizedLegibility}.ezcol-one-quarter{width:22%}.ezcol-one-half{width:48%}.ezcol-three-quarter{width:74%}.ezcol-one-third{width:30.666%}.ezcol-two-third{width:65.334%}.ezcol-one-fifth{width:16.8%}.ezcol-two-fifth{width:37.6%}.ezcol-three-fifth{width:58.4%}.ezcol-four-fifth{width:79.2%}.ezcol-last{float:right;clear:right;margin-right:0}.ezcol-last:after{content:".";opacity:0;display:block;height:0;clear:both}.ezcol-both,.ezcol-left,.ezcol-right{margin:0;padding:0;background:none}.ezcol-divider{clear:both !important;display:block !important;margin-bottom:0px !important;padding-top:0px !important;width:100% !important;background:none !important}.ezcol-both{clear:both !important}.ezcol-left{clear:left !important}.ezcol-right{clear:right !important}@media all and (max-width: 768px){.ezcol-one-quarter,.ezcol-one-half,.ezcol-three-quarter,.ezcol-one-third,.ezcol-two-third,.ezcol-one-fifth,.ezcol-two-fifth,.ezcol-three-fifth,.ezcol-four-fifth{width:48% !important;margin-right:2%}.ezcol-last{float:left;clear:none;display:block}.ezcol-last:after{content:"";display:block;clear:none}.ezcol-last+.ezcol-divider{clear:none !important;display:none !important;margin:0
+!important;padding:0
+!important}}@media all and (max-width: 480px){.ezcol-one-quarter,.ezcol-one-half,.ezcol-three-quarter,.ezcol-one-third,.ezcol-two-third,.ezcol-one-fifth,.ezcol-two-fifth,.ezcol-three-fifth,.ezcol-four-fifth{width:100% !important;margin-right:0}}
+/*
+     FILE ARCHIVED ON 13:54:36 Jul 10, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:50:20 Jul 12, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.745
+  exclusion.robots: 0.056
+  exclusion.robots.policy: 0.042
+  esindex: 0.011
+  cdx.remote: 6.496
+  LoadShardBlock: 163.054 (3)
+  PetaboxLoader3.datanode: 51.193 (4)
+  PetaboxLoader3.resolve: 139.999 (2)
+  load_resource: 56.227
+*/

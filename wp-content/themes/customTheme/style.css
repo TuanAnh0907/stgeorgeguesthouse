@@ -1,0 +1,1746 @@
+/*
+Theme Name: St George Guest House
+Theme URI: https://www.stgeorgeguesthouse.com/
+Author: Martin J. | Maann Media Enterprise
+Author URI: Maann Media Enterprise // https://maann.ie / https://maannphotography.com
+Description: You are sure of a warm welcome here at the Saint George, under the management of Michael Power and staff.
+We are close to all amenities and provide a private lock-up car park.
+All our bedrooms are en-suite and have thermostatically controlled heating.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: twentyfourteen
+Template: twentyfourteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Repeatable Patterns
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ * 5.0 - Navigation
+ * 6.0 - Content
+ *   6.1 - Post Thumbnail
+ *   6.2 - Entry Header
+ *   6.3 - Entry Meta
+ *   6.4 - Entry Content
+ *   6.5 - Galleries
+ *   6.6 - Post Formats
+ *   6.7 - Post/Image/Paging Navigation
+ *   6.8 - Attachments
+ *   6.9 - Archives
+ *   6.10 - Contributor Page
+ *   6.11 - 404 Page
+ *   6.12 - Full-width
+ *   6.13 - Singular
+ *   6.14 - Comments
+ * 7.0 - Sidebar
+ *   7.1 - Widgets
+ *   7.2 - Content Sidebar Widgets
+ * 8.0 - Footer
+ * 9.0 - Featured Content
+ * 10.0 - Multisite
+ * 11.0 - Media Queries
+ * 12.0 - Print
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * 1.0 Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer https://meyerweb.com/eric/tools/css/reset/index.html
+ * along with Nicolas Gallagher and Jonathan Neal
+ * https://necolas.github.com/normalize.css/ and Blueprint
+ * https://www.blueprintcss.org/
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+@import url("/wp-content/themes/twentyfourteen/style.css");
+
+.site {
+    background-color: #fff;
+    clear: both;
+    margin: 0 auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    max-width: 921px;
+    position: relative;
+    border: 1px solid rgb(128, 0, 0);
+    margin-top: 8px;
+    padding: 5px;
+    color: #800000;
+
+}
+
+.site:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid #B2C1C8;
+    border: 1px solid rgb(128, 0, 0);
+}
+
+a {
+    color: rgb(128, 0, 0);
+}
+
+a:hover {
+    color: rgb(80, 0, 0);
+}
+
+#post-2 > header > h1 {
+    display: none;
+}
+
+body {
+    background-color: rgb(249, 244, 240);
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+li {
+    font-size: 13px;
+}
+
+h2 {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.entry-title {
+    display: inline-block;
+    margin-top: 12px !important;
+}
+
+.hentry {
+    margin-bottom: 5px;
+}
+
+hr {
+    display: block;
+    clear: both;
+}
+
+#main.site-main {
+    border: 1px solid rgb(128, 0, 0);
+    margin: 0;
+}
+
+.full-width .archive-header, .full-width .comments-area, .full-width .image-navigation, .full-width .page-header, .full-width .page-content, .full-width .post-navigation, .full-width .site-content .entry-header, .full-width .site-content .entry-content, .full-width .site-content .entry-summary, .full-width .site-content footer.entry-meta {
+    max-width: 100%;
+}
+
+.content-area, .content-sidebar {
+    padding-top: 10px;
+}
+
+/* HEADER */
+#header-top {
+    max-width: 921px;
+    margin: 0 auto;
+}
+
+#top-block {
+    max-width: 100%;
+    text-align: center;
+}
+
+#top-block .widget {
+    margin: 8px 0 26px 0;
+}
+
+#top-block .textwidget {
+    font-size: 10px;
+}
+
+#logo-top {
+    max-width: 100%;
+    text-align: center;
+}
+
+#logo-top a img {
+    max-width: 100%;
+}
+
+#contact-info {
+    max-width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#contact-info .widget {
+    margin: 0;
+    max-width: 33%;
+    float: left;
+    color: rgb(128, 0, 0);
+    font-weight: 900;
+}
+
+/* NAVIGATION */
+#primary-navigation {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgb(128, 0, 0);
+    border-bottom: 1px solid rgb(128, 0, 0);
+    margin-top: 20px;
+}
+
+.site-navigation a {
+    color: rgb(128, 0, 0);
+    font-size: 14px;
+    text-transform: none;
+    padding: 0 20px;
+    margin-left: -3px;
+}
+
+.site-navigation a:hover {
+    color: rgb(128, 0, 0);
+}
+
+.site-navigation .current_page_item > a, .site-navigation .current_page_ancestor > a, .site-navigation .current-menu-item > a, .site-navigation .current-menu-ancestor > a {
+    color: rgb(128, 0, 0);
+    font-weight: 900;
+}
+
+.primary-navigation li:hover > a, .primary-navigation li.focus > a {
+    background: rgb(128, 0, 0);
+    color: #fff;
+}
+
+.primary-navigation li {
+    border-right: 1px solid rgb(128, 0, 0);
+}
+
+.primary-navigation li.no-border {
+    border: none;
+}
+
+#translator-top {
+    float: right;
+    width: 20%;
+    display: inline-block;
+    z-index: 99999;
+    height: 25px;
+    margin-top: 10px;
+}
+
+/* CONTENT */
+.full-width .site-content blockquote.alignright, .full-width .site-content img.size-full.alignright, .full-width .site-content img.size-large.alignright, .full-width .site-content img.size-medium.alignright, .full-width .site-content .wp-caption.alignright {
+    margin-right: 0;
+}
+
+.full-width .site-content blockquote.alignleft, .full-width .site-content img.size-full.alignleft, .full-width .site-content img.size-large.alignleft, .full-width .site-content img.size-medium.alignleft, .full-width .site-content .wp-caption.alignleft {
+    margin-left: 0;
+}
+
+.full-width .archive-header, .full-width .comments-area, .full-width .image-navigation, .full-width .page-header, .full-width .page-content, .full-width .post-navigation, .full-width .site-content .entry-header, .full-width .site-content .entry-content, .full-width .site-content .entry-summary, .full-width .site-content footer.entry-meta {
+    padding: 0 10px;
+}
+
+blockquote.alignright, figure.wp-caption.alignright, img.alignright {
+    margin: 0;
+}
+
+/* BUTTONS */
+.button-main-page2 {
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.button-main-page1 {
+    margin-top: 12px;
+}
+
+.button-home1 {
+    background: #800000;
+    color: #fff;
+    padding: 10px 6px;
+    width: 45%;
+    margin-top: 12px;
+    float: left;
+    display: block;
+}
+
+.button-home1 a,
+.button-home2 a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.button-home2 {
+    background: #800000;
+    color: #fff;
+    padding: 10px 6px;
+    width: 45%;
+    margin-top: 12px;
+    margin-left: 18px;
+    float: left;
+    display: block;
+}
+
+.button-home1:hover,
+.button-home2:hover {
+    background: #560000;
+}
+
+.fa-lg {
+    padding: 0 10px 0;
+}
+
+/* FOOTER */
+#footer-block-widget {
+    max-width: 921px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+#bottom-widget1, #bottom-widget2 {
+    width: 50%;
+    float: left;
+}
+
+#bottom-widget2 {
+    text-align: right;
+}
+
+#footer-block-widget .widget {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#footer-block-widget .widget a {
+    color: rgb(128, 0, 0);
+}
+
+#footer-block-widget .widget a:hover {
+    color: rgb(84, 0, 0);
+}
+
+/* FORM */
+.field-wrap.list-dropdown-wrap.label-above {
+    width: 20%;
+    float: left;
+    margin-right: 20px;
+}
+
+.field-wrap.textarea-wrap.label-above {
+    clear: both;
+    width: 70%;
+}
+
+.field-wrap.text-wrap.label-above {
+    width: 40%;
+}
+
+button, .button, input[type="button"], input[type="reset"], input[type="submit"] {
+    background: rgb(128, 0, 0);
+    color: #fff;
+}
+
+button:hover, .button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+    background: rgb(80, 0, 0);
+}
+
+.site-info {
+    color: #555;
+    font-size: 12px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.site-info a {
+    color: #222;
+    font-size: 12px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+/* CUSTOME MEDIA QUERIES */
+
+@media screen and (min-device-width: 1025px) and (max-width: 1275px) {
+    #category {
+        max-width: 316px;
+        height: 237px;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 1008px;
+
+    }
+
+    .menu-toggle {
+        top: 0px;
+        right: 0px;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: -26px;
+    }
+
+    .su-button-style-flat, .su-button-style-flat span {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+}
+
+/* Portrait and Landscape */
+@media screen and (min-device-width: 768px) and (max-width: 1024px) {
+    #category {
+        max-width: 231px;
+        height: 174px;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 753px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    #top-widget {
+        padding-right: 10px;
+    }
+
+    .banner-booking {
+        height: 248px;
+    }
+
+    .banner-booking #b_editDates h3 {
+        font-size: 14px !important;
+    }
+
+    .banner-booking .b_availDatesInner select {
+        height: 26px;
+    }
+
+    h3.booking-title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .banner-booking #b_availSubmit input {
+        margin-top: -15px;
+        padding: 8px;
+    }
+
+    .menu-toggle {
+        top: 0px;
+        right: 0px;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+    html #wpadminbar {
+        display: none;
+    }
+
+    .menu-toggle {
+        top: 0px;
+        right: 0;
+    }
+
+    .su-button {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-device-width: 1008px) {
+    #primary-navigation {
+        height: 53px;
+    }
+
+    #primary-navigation.site-navigation.primary-navigation.toggled-on {
+        height: 53px;
+    }
+
+    #primary-navigation ul li > a > span {
+        display: none;
+    }
+
+    #primary-navigation ul li {
+        float: none;
+    }
+
+    #primary-navigation > div {
+        width: 99%;
+        right: 0;
+        background: #fff;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+        border: 1px solid #800000;
+        z-index: 99999;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #primary-navigation ul li a {
+        padding: 10px;
+    }
+
+    .primary-navigation.toggled-on {
+        padding: 0;
+    }
+
+    .menu-toggle {
+        top: 0px;
+        right: 0;
+    }
+
+}
+
+@media screen and (min-width: 1008px) {
+    .site-content {
+        margin-right: 36.047619%;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #category {
+        max-width: 300px;
+        height: 225px;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 960px;
+    }
+
+    .menu-toggle {
+        top: 0px;
+        right: 0;
+    }
+
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 359px) {
+    #primary-navigation {
+        height: 53px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    #primary-navigation.site-navigation.primary-navigation.toggled-on {
+        height: 53px;
+        z-index: 999999;
+    }
+
+    #primary-navigation ul li > a > span {
+        display: none;
+    }
+
+    #primary-navigation ul li {
+        float: none;
+    }
+
+    #primary-navigation > div {
+        width: 99%;
+        right: 0;
+        background: #fff;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+        border: 1px solid #800000;
+        z-index: 99999;
+    }
+
+    #primary-navigation ul li a {
+        padding: 10px;
+    }
+
+    .primary-navigation.toggled-on {
+        padding: 0;
+    }
+
+    .banner-booking {
+        display: block;
+        top: 360px;
+        height: 258px;
+        width: 298px;
+    }
+
+    .banner-booking #b_editDates h3 {
+        font-size: 14px !important;
+    }
+
+    .banner-booking .b_availDatesInner select {
+        height: 26px;
+    }
+
+    h3.booking-title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .banner-booking #b_availSubmit input {
+        margin-top: -4px;
+        padding: 8px;
+    }
+
+    #categories {
+        max-width: 320px;
+        margin: 0 auto;
+        margin-top: 274px;
+    }
+
+    #category {
+        max-width: 320px;
+        height: 240px;
+        margin: 2px 0 !important;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 660px;
+    }
+
+    .categories-title {
+        font-size: 20px !important;
+    }
+
+    .content-sidebar {
+        margin-left: 0;
+        padding-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header-top {
+        height: 168px;
+    }
+
+    #top-widget {
+        text-align: center;
+        display: block;
+        width: 320px;
+    }
+
+    #top-widget .widget {
+        font-size: 12px;
+    }
+
+    #logo-top {
+        max-width: 320px;
+        float: none;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        top: 0;
+        right: 0;
+        z-index: 999999;
+    }
+
+    .su-button-style-flat, .su-button-style-flat span {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+    .site {
+        left: 12px;
+    }
+
+    #bottom-widget1 .textwidget p, #bottom-widget2 .textwidget p {
+        font-size: 10px;
+    }
+
+    #contact-info .textwidget {
+        font-size: 10px;
+    }
+
+    #footer-block-widget {
+        margin-left: 12px;
+    }
+
+    .button-home1 {
+        width: 96%;
+    }
+
+    .button-home2 {
+        width: 96%;
+        margin-left: 0;
+    }
+
+    #top-block {
+        max-width: 80%;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .primary-navigation.toggled-on .nav-menu {
+        margin-top: 45px;
+    }
+
+    #contact-info-widget aside#text-3,
+    #contact-info-widget aside#text-9,
+    #contact-info-widget aside#text-5 {
+        max-width: 100%;
+        margin: 6px 0;
+    }
+
+    #contact-info-widget aside#text-4 .textwidget {
+        color: #333;
+    }
+
+    #primary-navigation {
+        height: 77px;
+    }
+
+    #primary.content-area {
+        margin-top: 5px;
+    }
+
+    #text-4 > div > p > span {
+        z-index: 999999;
+        color: #333;
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-device-width: 660px) {
+    #primary-navigation {
+        height: 53px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    #primary-navigation.site-navigation.primary-navigation.toggled-on {
+        height: 53px;
+    }
+
+    #primary-navigation ul li > a > span {
+        display: none;
+    }
+
+    #primary-navigation ul li {
+        float: none;
+    }
+
+    #primary-navigation > div {
+        width: 99%;
+        right: 0;
+        background: #fff;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+        border: 1px solid #800000;
+        z-index: 99999;
+    }
+
+    #primary-navigation ul li a {
+        padding: 10px;
+    }
+
+    .primary-navigation.toggled-on {
+        padding: 0;
+    }
+
+    .banner-booking {
+        display: block;
+        top: 144px;
+        height: 258px;
+    }
+
+    .banner-booking #b_editDates h3 {
+        font-size: 14px !important;
+    }
+
+    .banner-booking .b_availDatesInner select {
+        height: 26px;
+    }
+
+    h3.booking-title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .banner-booking #b_availSubmit input {
+        margin-top: -15px;
+        padding: 8px;
+    }
+
+    #category {
+        max-width: 208px;
+        height: 156px;
+        margin: 0 !important;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 660px;
+    }
+
+    .categories-title {
+        font-size: 20px !important;
+    }
+
+    .content-sidebar {
+        margin-left: 0;
+        padding-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        top: 0;
+        right: 0;
+        z-index: 999999;
+    }
+
+    .su-button-style-flat, .su-button-style-flat span {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+    .site {
+        left: 12px;
+    }
+
+    #bottom-widget1 .textwidget p, #bottom-widget2 .textwidget p {
+        font-size: 10px;
+    }
+
+    #contact-info .textwidget {
+        font-size: 10px;
+    }
+
+    #footer-block-widget {
+        margin-left: 12px;
+    }
+
+    .button-home1 {
+        width: 96%;
+    }
+
+    .button-home2 {
+        width: 96%;
+        margin-left: 0;
+    }
+
+    #top-block {
+        max-width: 80%;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .primary-navigation.toggled-on .nav-menu {
+        margin-top: 45px;
+    }
+
+    #contact-info-widget aside#text-3,
+    #contact-info-widget aside#text-9,
+    #contact-info-widget aside#text-5 {
+        max-width: 100%;
+        margin: 6px 0;
+    }
+
+    #contact-info-widget aside#text-4 .textwidget {
+        color: #333;
+    }
+
+    #primary-navigation {
+        height: 77px;
+    }
+
+    #primary.content-area {
+        margin-top: 5px;
+    }
+
+    #text-4 > div > p > span {
+        z-index: 999999;
+        color: #333;
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-device-width: 360px) and (max-device-width: 639px) {
+    #primary-navigation {
+        height: 53px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    #primary-navigation.site-navigation.primary-navigation.toggled-on {
+        height: 53px;
+        z-index: 999999;
+    }
+
+    #primary-navigation ul li > a > span {
+        display: none;
+    }
+
+    #primary-navigation ul li {
+        float: none;
+    }
+
+    #primary-navigation > div {
+        width: 99%;
+        right: 0;
+        background: #fff;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+        border: 1px solid #800000;
+        z-index: 99999;
+    }
+
+    #primary-navigation ul li a {
+        padding: 10px;
+    }
+
+    .primary-navigation.toggled-on {
+        padding: 0;
+    }
+
+    .banner-booking {
+        display: block;
+        top: 375px;
+        height: 258px;
+        width: 340px;
+    }
+
+    .banner-booking #b_editDates h3 {
+        font-size: 14px !important;
+    }
+
+    .banner-booking .b_availDatesInner select {
+        height: 26px;
+    }
+
+    h3.booking-title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .banner-booking #b_availSubmit input {
+        margin-top: -4px;
+        padding: 8px;
+    }
+
+    #categories {
+        max-width: 360px;
+        margin: 0 auto;
+        margin-top: 274px;
+    }
+
+    #category {
+        max-width: 360px;
+        height: 270px;
+        margin: 2px 0 !important;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 660px;
+    }
+
+    .categories-title {
+        font-size: 20px !important;
+    }
+
+    .content-sidebar {
+        margin-left: 0;
+        padding-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header-top {
+        height: 168px;
+    }
+
+    #top-widget {
+        text-align: center;
+        display: block;
+        width: 360px;
+    }
+
+    #top-widget .widget {
+        font-size: 12px;
+    }
+
+    #logo-top {
+        max-width: 360px;
+        float: none;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        top: 0;
+        right: 0;
+        z-index: 999999;
+    }
+
+    .su-button-style-flat, .su-button-style-flat span {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+    .site {
+        left: 5px;
+    }
+
+    #bottom-widget1 .textwidget p, #bottom-widget2 .textwidget p {
+        font-size: 10px;
+    }
+
+    #contact-info .textwidget {
+        font-size: 10px;
+    }
+
+    #footer-block-widget {
+        margin-left: 12px;
+    }
+
+    .button-home1 {
+        width: 96%;
+    }
+
+    .button-home2 {
+        width: 96%;
+        margin-left: 0;
+    }
+
+    #top-block {
+        max-width: 80%;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .primary-navigation.toggled-on .nav-menu {
+        margin-top: 45px;
+    }
+
+    #contact-info-widget aside#text-3,
+    #contact-info-widget aside#text-9,
+    #contact-info-widget aside#text-5 {
+        max-width: 100%;
+        margin: 6px 0;
+    }
+
+    #contact-info-widget aside#text-4 .textwidget {
+        color: #333;
+    }
+
+    #primary-navigation {
+        height: 77px;
+    }
+
+    #primary.content-area {
+        margin-top: 5px;
+    }
+
+    #text-4 > div > p > span {
+        z-index: 999999;
+        color: #333;
+        font-size: 11px;
+    }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    #primary-navigation {
+        height: 53px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    #primary-navigation.site-navigation.primary-navigation.toggled-on {
+        height: 53px;
+        z-index: 999999;
+    }
+
+    #primary-navigation ul li > a > span {
+        display: none;
+    }
+
+    #primary-navigation ul li {
+        float: none;
+    }
+
+    #primary-navigation > div {
+        width: 99%;
+        right: 0;
+        background: #fff;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+        border: 1px solid #800000;
+        z-index: 99999;
+    }
+
+    #primary-navigation ul li a {
+        padding: 10px;
+    }
+
+    .primary-navigation.toggled-on {
+        padding: 0;
+    }
+
+    .banner-booking {
+        display: block;
+        top: 415px;
+        height: 208px;
+        width: 460px;
+    }
+
+    .banner-booking #b_editDates h3 {
+        font-size: 14px !important;
+    }
+
+    .banner-booking .b_availDatesInner select {
+        height: 26px;
+    }
+
+    h3.booking-title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .banner-booking #b_availSubmit input {
+        margin-top: -4px;
+        padding: 8px;
+    }
+
+    #categories {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 220px;
+    }
+
+    #category {
+        max-width: 400px;
+        height: 300px;
+        margin: 2px 0 !important;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 480px;
+    }
+
+    .categories-title {
+        font-size: 20px !important;
+    }
+
+    .content-sidebar {
+        margin-left: 0;
+        padding-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header-top {
+        height: 168px;
+    }
+
+    #top-widget {
+        text-align: center;
+        display: block;
+        width: 480px;
+    }
+
+    #top-widget .widget {
+        font-size: 12px;
+    }
+
+    #logo-top {
+        max-width: 480px;
+        float: none;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        top: 0;
+        right: 0;
+        z-index: 999999;
+    }
+
+    .su-button-style-flat, .su-button-style-flat span {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+    .site {
+        left: 12px;
+    }
+
+    #bottom-widget1 .textwidget p, #bottom-widget2 .textwidget p {
+        font-size: 10px;
+    }
+
+    #contact-info .textwidget {
+        font-size: 10px;
+    }
+
+    #footer-block-widget {
+        margin-left: 12px;
+    }
+
+    .button-home1 {
+        width: 96%;
+    }
+
+    .button-home2 {
+        width: 96%;
+        margin-left: 0;
+    }
+
+    #top-block {
+        max-width: 80%;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .primary-navigation.toggled-on .nav-menu {
+        margin-top: 45px;
+    }
+
+    #contact-info-widget aside#text-3,
+    #contact-info-widget aside#text-9,
+    #contact-info-widget aside#text-5 {
+        max-width: 100%;
+        margin: 6px 0;
+    }
+
+    #contact-info-widget aside#text-4 .textwidget {
+        color: #333;
+    }
+
+    #primary-navigation {
+        height: 77px;
+    }
+
+    #primary.content-area {
+        margin-top: 5px;
+    }
+
+    #text-4 > div > p > span {
+        z-index: 999999;
+        color: #333;
+        font-size: 11px;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 665px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    #primary-navigation {
+        height: 53px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    #primary-navigation.site-navigation.primary-navigation.toggled-on {
+        height: 53px;
+        z-index: 999999;
+    }
+
+    #primary-navigation ul li > a > span {
+        display: none;
+    }
+
+    #primary-navigation ul li {
+        float: none;
+    }
+
+    #primary-navigation > div {
+        width: 99%;
+        right: 0;
+        background: #fff;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+        border: 1px solid #800000;
+        z-index: 99999;
+    }
+
+    #primary-navigation ul li a {
+        padding: 10px;
+    }
+
+    .primary-navigation.toggled-on {
+        padding: 0;
+    }
+
+    .banner-booking {
+        display: block;
+        top: 481px;
+        height: 165px;
+        width: 645px;
+    }
+
+    .banner-booking #b_editDates h3 {
+        font-size: 14px !important;
+    }
+
+    .banner-booking .b_availDatesInner select {
+        height: 26px;
+    }
+
+    h3.booking-title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .banner-booking #b_availSubmit input {
+        margin-top: -4px;
+        padding: 8px;
+    }
+
+    #categories {
+        max-width: 667px;
+        margin: 0 auto;
+        margin-top: 220px;
+    }
+
+    #category {
+        max-width: 220px;
+        height: 165px;
+        margin: 2px 0 !important;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 660px;
+    }
+
+    .categories-title {
+        font-size: 20px !important;
+    }
+
+    .content-sidebar {
+        margin-left: 0;
+        padding-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header-top {
+        height: 168px;
+    }
+
+    #top-widget {
+        text-align: right;
+        display: block;
+        float: right;
+        padding: 10px 10px 0 0;
+    }
+
+    #top-widget .widget {
+        font-size: 12px;
+    }
+
+    #logo-top {
+        max-width: 300px;
+        float: left;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        top: 0;
+        right: 0;
+        z-index: 999999;
+    }
+
+    .su-button-style-flat, .su-button-style-flat span {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+    .site {
+        left: 12px;
+    }
+
+    #bottom-widget1 .textwidget p, #bottom-widget2 .textwidget p {
+        font-size: 10px;
+    }
+
+    #contact-info .textwidget {
+        font-size: 10px;
+    }
+
+    #footer-block-widget {
+        margin-left: 12px;
+    }
+
+    .button-home1 {
+        width: 96%;
+    }
+
+    .button-home2 {
+        width: 96%;
+        margin-left: 0;
+    }
+
+    #top-block {
+        max-width: 80%;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .primary-navigation.toggled-on .nav-menu {
+        margin-top: 45px;
+    }
+
+    #contact-info-widget aside#text-3,
+    #contact-info-widget aside#text-9,
+    #contact-info-widget aside#text-5 {
+        max-width: 100%;
+        margin: 6px 0;
+    }
+
+    #contact-info-widget aside#text-4 .textwidget {
+        color: #333;
+    }
+
+    #primary-navigation {
+        height: 77px;
+    }
+
+    #primary.content-area {
+        margin-top: 5px;
+    }
+
+    #text-4 > div > p > span {
+        z-index: 999999;
+        color: #333;
+        font-size: 11px;
+    }
+}
+
+@media only screen
+and (min-device-width: 567px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    #primary-navigation {
+        height: 53px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    #primary-navigation.site-navigation.primary-navigation.toggled-on {
+        height: 53px;
+        z-index: 999999;
+    }
+
+    #primary-navigation ul li > a > span {
+        display: none;
+    }
+
+    #primary-navigation ul li {
+        float: none;
+    }
+
+    #primary-navigation > div {
+        width: 99%;
+        right: 0;
+        background: #fff;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+        border: 1px solid #800000;
+        z-index: 99999;
+    }
+
+    #primary-navigation ul li a {
+        padding: 10px;
+    }
+
+    .primary-navigation.toggled-on {
+        padding: 0;
+    }
+
+    .banner-booking {
+        display: block;
+        top: 445px;
+        height: 208px;
+        width: 540px;
+    }
+
+    .banner-booking #b_editDates h3 {
+        font-size: 14px !important;
+    }
+
+    .banner-booking .b_availDatesInner select {
+        height: 26px;
+    }
+
+    h3.booking-title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .banner-booking #b_availSubmit input {
+        margin-top: -4px;
+        padding: 8px;
+    }
+
+    #categories {
+        max-width: 400px;
+        margin: 220px auto 0;
+    }
+
+    #category {
+        max-width: 400px;
+        height: 300px;
+        margin: 2px 0 !important;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 480px;
+    }
+
+    .categories-title {
+        font-size: 20px !important;
+    }
+
+    .content-sidebar {
+        margin-left: 0;
+        padding-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header-top {
+        height: 168px;
+    }
+
+    #top-widget {
+        text-align: center;
+        display: block;
+        width: 568px;
+    }
+
+    #top-widget .widget {
+        font-size: 12px;
+    }
+
+    #logo-top {
+        max-width: 568px;
+        float: none;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        top: 0;
+        right: 0;
+        z-index: 999999;
+    }
+
+    .su-button-style-flat, .su-button-style-flat span {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+    .site {
+        left: 12px;
+    }
+
+    #bottom-widget1 .textwidget p, #bottom-widget2 .textwidget p {
+        font-size: 10px;
+    }
+
+    #contact-info .textwidget {
+        font-size: 10px;
+    }
+
+    #footer-block-widget {
+        margin-left: 12px;
+    }
+
+    .button-home1 {
+        width: 96%;
+    }
+
+    .button-home2 {
+        width: 96%;
+        margin-left: 0;
+    }
+
+    #top-block {
+        max-width: 80%;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .primary-navigation.toggled-on .nav-menu {
+        margin-top: 45px;
+    }
+
+    #contact-info-widget aside#text-3,
+    #contact-info-widget aside#text-9,
+    #contact-info-widget aside#text-5 {
+        max-width: 100%;
+        margin: 6px 0;
+    }
+
+    #contact-info-widget aside#text-4 .textwidget {
+        color: #333;
+    }
+
+    #primary-navigation {
+        height: 77px;
+    }
+
+    #primary.content-area {
+        margin-top: 5px;
+    }
+
+    #text-4 > div > p > span {
+        z-index: 999999;
+        color: #333;
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 1276px) {
+    #category {
+        max-width: 400px;
+        height: 280px;
+    }
+
+    .cat-wrap {
+        margin: 0 auto;
+        max-width: 1260px;
+    }
+
+    html #wpadminbar {
+        display: none;
+    }
+
+    .menu-toggle {
+        top: -48px;
+        right: 11px;
+    }
+
+    #translator-top {
+        width: 45%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .goog-te-banner-frame {
+        display: none;
+    }
+}
+
+/*
+     FILE ARCHIVED ON 11:45:00 Jan 22, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:51:28 Jul 12, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.669
+  exclusion.robots: 0.032
+  exclusion.robots.policy: 0.019
+  esindex: 0.012
+  cdx.remote: 21.525
+  LoadShardBlock: 2526.168 (3)
+  PetaboxLoader3.datanode: 2488.839 (4)
+  PetaboxLoader3.resolve: 81.26 (2)
+  load_resource: 72.618
+*/
